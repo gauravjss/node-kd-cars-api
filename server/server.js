@@ -60,6 +60,31 @@ app.get('/todos/:id', (req,res) => {
     })
 });
 
+
+app.delete('/todos/:id', (req,res) => {
+    const id = req.params.id;
+    if(!ObjectID.isValid(id)){
+        res.status(404).send('The ID is Invalid');
+    }
+    Todo.findByIdAndRemove(id).then((todo) => {
+        if(todo){
+            res.send({
+                todo,
+                code:'Deleted from DB'
+            })
+        }
+        else{
+            res.status(404).send({
+                message:'There is no Record with this ID',
+                code:'message from KD'
+            })
+        }
+    }, (e) => {
+        res.status(400).send(e);
+    });
+
+});
+
 app.listen(port, () => {
     console.log(`Started up at Port ${port}`);
 });
