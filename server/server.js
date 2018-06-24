@@ -26,6 +26,7 @@ app.patch('/todos/:id', TodoRoutes.patchRoute);
 app.get('/cars', CarRoutes.getCarRoute);
 app.get('/driverCars', CarRoutes.getCarDriverRoute);
 app.get('/airlines', CarRoutes.getAirlinesRoute);
+app.get('/accounts', CarRoutes.getAccountsRoute);
 
 
 app.listen(port, () => {
