@@ -1,0 +1,535 @@
+{
+  "response": {
+    "header": {
+      "refId": "Id-61cf64554cec03006725000055ee11c1",
+      "operationName": "getDrugDetails",
+      "statusCode": "0000",
+      "statusDesc": "Success"
+    },
+    "detail": {
+      "drugDetailsList": {
+        "drug": [
+          {
+            "drugName": "
+                    LIPOSYN III
+                ",
+            "genericName": "
+                    FAT EMULSIONS
+                ",
+            "drugStrength": "
+                    20%
+                ",
+            "drugForm": "
+                    EMULSION
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "9",
+              "commonDispensedQuantity": "2343.8",
+              "deaClassCode": "0",
+              "gpiCode": "80200010001620",
+              "maintenance": "false",
+              "ndcId": "409979103",
+              "nhu": "1",
+              "orangeCode": "AP",
+              "orangeDesc": "
+                        INJECTABLE AQUEOUS SOLUTIONS INCLUDING DRY POWDERS, CONCENTRATED SOLUTION OR READY TO USE SOLUTIONS ARE CONSIDERED PHARMACEUTICALLY AND THERAPEUTICALLY EQUIVALENT IF THEY PRODUCE THE SAME CONCENTRATION AND ARE LABELED SIMILARLY.
+                    ",
+              "packageSize": "500.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    intralipid
+                ",
+            "genericName": "
+                    FAT EMULSIONS
+                ",
+            "drugStrength": "
+                    20%
+                ",
+            "drugForm": "
+                    EMULSION
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false",
+              "status": "P"
+            },
+            "retailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "7",
+              "commonDispensedQuantity": "500.0",
+              "deaClassCode": "0",
+              "gpiCode": "80200010001620",
+              "maintenance": "false",
+              "ndcId": "338051903",
+              "nhu": "1",
+              "orangeCode": "AP",
+              "orangeDesc": "
+                        INJECTABLE AQUEOUS SOLUTIONS INCLUDING DRY POWDERS, CONCENTRATED SOLUTION OR READY TO USE SOLUTIONS ARE CONSIDERED PHARMACEUTICALLY AND THERAPEUTICALLY EQUIVALENT IF THEY PRODUCE THE SAME CONCENTRATION AND ARE LABELED SIMILARLY.
+                    ",
+              "packageSize": "500.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPITOR
+                ",
+            "genericName": "
+                    ATORVASTATIN CALCIUM
+                ",
+            "drugStrength": "
+                    10MG
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "90",
+              "commonDispensedQuantity": "90.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100310",
+              "maintenance": "false",
+              "ndcId": "71015534",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "5000.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "30.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100310",
+              "maintenance": "false",
+              "ndcId": "71015523",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPITOR
+                ",
+            "genericName": "
+                    ATORVASTATIN CALCIUM
+                ",
+            "drugStrength": "
+                    20MG
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "90",
+              "commonDispensedQuantity": "90.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100320",
+              "maintenance": "false",
+              "ndcId": "71015623",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "30.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100320",
+              "maintenance": "false",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPITOR
+                ",
+            "genericName": "
+                    ATORVASTATIN CALCIUM
+                ",
+            "drugStrength": "
+                    40MG
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "90",
+              "commonDispensedQuantity": "90.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100330",
+              "maintenance": "false",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "30.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100330",
+              "maintenance": "false",
+              "ndcId": "71015723",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPITOR
+                ",
+            "genericName": "
+                    ATORVASTATIN CALCIUM
+                ",
+            "drugStrength": "
+                    80MG
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "90",
+              "commonDispensedQuantity": "90.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100350",
+              "maintenance": "false",
+              "ndcId": "71015823",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "30.0",
+              "deaClassCode": "0",
+              "gpiCode": "39400010100350",
+              "maintenance": "false",
+              "ndcId": "71015823",
+              "nhu": "1",
+              "orangeCode": "AB",
+              "orangeDesc": "
+                        PRODUCTS MEETING NECESSARY BIOEQUIVALENCE REQUIREMENTS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPOFEN
+                ",
+            "genericName": "
+                    FENOFIBRATE
+                ",
+            "drugStrength": "
+                    150MG
+                ",
+            "drugForm": "
+                    CAPSULE
+                ",
+            "mailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "90",
+              "commonDispensedQuantity": "90.0",
+              "deaClassCode": "0",
+              "gpiCode": "39200025000124",
+              "maintenance": "false",
+              "ndcId": "66869014730",
+              "nhu": "1",
+              "orangeCode": "ZC",
+              "orangeDesc": "
+                        PHARMACEUTICAL ENTITY AND LABELER EVALUATED BUT NO THERAPEUTIC EQUIVALENCE RATING GIVEN. USUALLY APPLIES TO SINGLE SOURCE DRUGS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "30.0",
+              "deaClassCode": "0",
+              "gpiCode": "39200025000124",
+              "maintenance": "false",
+              "ndcId": "66869014730",
+              "nhu": "1",
+              "orangeCode": "ZC",
+              "orangeDesc": "
+                        PHARMACEUTICAL ENTITY AND LABELER EVALUATED BUT NO THERAPEUTIC EQUIVALENCE RATING GIVEN. USUALLY APPLIES TO SINGLE SOURCE DRUGS.
+                    ",
+              "packageSize": "90.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPOIC ACID
+                ",
+            "genericName": "
+                    DL-ALPHA LIPOIC ACID
+                ",
+            "drugStrength": "
+                    Miscellaneous
+                ",
+            "drugForm": "
+                    POWDER
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "60.0",
+              "deaClassCode": "0",
+              "gpiCode": "96426448302900",
+              "maintenance": "false",
+              "ndcId": "51927278100",
+              "nhu": "1",
+              "orangeCode": "ZB",
+              "orangeDesc": "
+                        PARTICULAR PHARMACEUTICAL ENTITY WAS NOT EVALUATED.
+                    ",
+              "packageSize": "1.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    LIPOIL
+                ",
+            "genericName": "
+                    LECITHIN/ISOPROPYL PALMITATE
+                ",
+            "drugStrength": "
+                    Miscellaneous
+                ",
+            "drugForm": "
+                    LIQUID
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false"
+            },
+            "retailDrug": {
+              "brand": "true",
+              "commonDaysSupply": "3",
+              "commonDispensedQuantity": "6.4",
+              "deaClassCode": "0",
+              "gpiCode": "98351023001700",
+              "maintenance": "false",
+              "ndcId": "51552055006",
+              "nhu": "1",
+              "orangeCode": "ZB",
+              "orangeDesc": "
+                        PARTICULAR PHARMACEUTICAL ENTITY WAS NOT EVALUATED.
+                    ",
+              "packageSize": "500.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    lipo-flavonoid plus
+                ",
+            "genericName": "
+                    BIOFLAV,LEMON/VIT BCOMP&C
+                ",
+            "drugStrength": "
+                    200-100MG
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false",
+              "status": "P"
+            },
+            "retailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "90.0",
+              "deaClassCode": "0",
+              "gpiCode": "78520000000300",
+              "maintenance": "false",
+              "ndcId": "89411050117",
+              "nhu": "3",
+              "orangeCode": "ZB",
+              "orangeDesc": "
+                        PARTICULAR PHARMACEUTICAL ENTITY WAS NOT EVALUATED.
+                    ",
+              "packageSize": "100.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    lipoflavonoid
+                ",
+            "genericName": "
+                    BIOFLAV,LEMON/VIT BCOMP&C
+                ",
+            "drugStrength": "
+                    Miscellaneous
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false",
+              "status": "P"
+            },
+            "retailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "60.0",
+              "deaClassCode": "0",
+              "gpiCode": "78520000000300",
+              "maintenance": "false",
+              "ndcId": "38485050117",
+              "nhu": "3",
+              "orangeCode": "ZB",
+              "orangeDesc": "
+                        PARTICULAR PHARMACEUTICAL ENTITY WAS NOT EVALUATED.
+                    ",
+              "packageSize": "100.0",
+              "speciality": "false"
+            }
+          },
+          {
+            "drugName": "
+                    lipoflavovit
+                ",
+            "genericName": "
+                    BIOFLAV,LEMON/VIT BCOMP&C
+                ",
+            "drugStrength": "
+                    Miscellaneous
+                ",
+            "drugForm": "
+                    TABLET
+                ",
+            "mailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "0",
+              "commonDispensedQuantity": "0.0",
+              "deaClassCode": "0",
+              "maintenance": "false",
+              "ndcId": "0",
+              "nhu": "0",
+              "packageSize": "0.0",
+              "speciality": "false",
+              "status": "P"
+            },
+            "retailDrug": {
+              "brand": "false",
+              "commonDaysSupply": "30",
+              "commonDispensedQuantity": "30.0",
+              "deaClassCode": "0",
+              "gpiCode": "78520000000300",
+              "maintenance": "false",
+              "ndcId": "54859070501",
+              "nhu": "1",
+              "orangeCode": "ZB",
+              "orangeDesc": "
+                        PARTICULAR PHARMACEUTICAL ENTITY WAS NOT EVALUATED.
+                    ",
+              "packageSize": "100.0",
+              "speciality": "false"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

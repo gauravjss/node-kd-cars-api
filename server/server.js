@@ -27,6 +27,8 @@ app.get('/cars', CarRoutes.getCarRoute);
 app.get('/driverCars', CarRoutes.getCarDriverRoute);
 app.get('/airlines', CarRoutes.getAirlinesRoute);
 app.get('/accounts', CarRoutes.getAccountsRoute);
+app.get('/drugType', CarRoutes.getDrugTypeRoute);
+app.get('/drugPrice', CarRoutes.getDrugPriceRoute);
 
 
 app.listen(port, () => {

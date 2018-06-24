@@ -3,6 +3,8 @@ var carJsonFile = require("../models/Cars.json");
 var carDriverJsonFile = require("../models/Car-Driver.json");
 var airlinesJsonFile = require("../models/Airlines.json");
 var accountsJsonFile = require("../models/Accounts.json");
+var drugPriceJsonFile = require("../models/DrugPrice.json");
+var drugTypeJsonFile = require("../models/DrugType.json");
 
 exports.getCarRoute = (req,res) => {
 
@@ -22,4 +24,14 @@ exports.getAirlinesRoute = (req,res) => {
 exports.getAccountsRoute = (req,res) => {
 
     res.json(accountsJsonFile);
+}
+
+exports.getDrugTypeRoute = (req,res) => {
+
+    res.json(drugTypeJsonFile);
+}
+
+exports.getDrugPriceRoute = (req,res) => {
+
+    res.json(drugPriceJsonFile);
 }

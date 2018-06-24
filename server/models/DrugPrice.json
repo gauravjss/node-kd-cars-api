@@ -1,0 +1,221 @@
+{
+  "response": {
+    "header": {
+      "refId": "Id-c42e3d560ac901006982000015e10618",
+      "operationName": "getDrugPrice",
+      "statusCode": "0000",
+      "statusDesc": "Success"
+    },
+    "detail": {
+      "costDetailsList": {
+        "costDetails": [
+          {
+            "drugName": "LIPITOR",
+            "drugStrength": "10MG",
+            "drugForm": "TABLET",
+            "brand": "true",
+            "preferredDrug": "false",
+            "mailPrice": {
+              "copayEmployer": "N/A",
+              "costAnnual": "81.11",
+              "costEmployer": "531.3",
+              "costEmployerAnnual": "2154.72",
+              "costPerUnit": "N/A",
+              "costPerUnitAnnual": "N/A",
+              "costPerUnitEmployerAnnual": "N/A",
+              "costToday": "20.00",
+              "coverageGapDiscountAmountIndicator": "false",
+              "daysSupply": "90",
+              "deductible": "0.00",
+              "deductibleEmployer": "N/A",
+              "flexPayIndicator": "true",
+              "genericCoinsuranceIndicator": "false",
+              "healthcareReimbursementAcctAppliedAmount": "0.00",
+              "memberCopayAmount": "20.00",
+              "ndcId": "71015523",
+              "penalties": "N/A",
+              "penaltiesEmployer": "N/A",
+              "primary": "false",
+              "primaryClaimNumber": "153106066073000",
+              "primaryClaimSequenceNumber": "999",
+              "secondaryClaimNumber": "153106066219000",
+              "secondaryClaimSequenceNumber": "999",
+              "settlementCode": "1512",
+              "settlementCodes": "Not covered: Ask your doctor about alternatives.|| Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "settlementDesc": "Not covered: Ask your doctor about alternatives.|| Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "rejectMessage": {
+                "settlementCode": "70",
+                "settlementDesc": "Choose another Pharmacy:This one isn't covered. This location does not offer vaccines.||Seleccione otra farmacia: Esta farmacia no tiene cobertura."
+              },
+              "totalDrugCost": "551.30",
+              "totalDrugCostAnnual": "2235.83",
+              "totalDrugCostPerUnitAnnual": "N/A",
+              "totalQuantity": "90.0"
+            },
+            "retailPrice": {
+              "copayEmployer": "N/A",
+              "costAnnual": "555.36",
+              "costEmployer": "118.47",
+              "costEmployerAnnual": "1421.64",
+              "costPerUnit": "N/A",
+              "costPerUnitAnnual": "N/A",
+              "costPerUnitEmployerAnnual": "N/A",
+              "costToday": "46.28",
+              "coverageGapDiscountAmountIndicator": "false",
+              "daysSupply": "30",
+              "deductible": "0.00",
+              "deductibleEmployer": "N/A",
+              "flexPayIndicator": "false",
+              "genericCoinsuranceIndicator": "false",
+              "healthcareReimbursementAcctAppliedAmount": "0.00",
+              "memberCopayAmount": "46.28",
+              "ndcId": "71015523",
+              "penalties": "0.00",
+              "penaltiesEmployer": "N/A",
+              "primary": "false",
+              "primaryClaimNumber": "153106064787000",
+              "primaryClaimSequenceNumber": "999",
+              "secondaryClaimNumber": "153106065250000",
+              "secondaryClaimSequenceNumber": "999",
+              "settlementCode": "1512",
+              "settlementCodes": "Not covered: Ask your doctor about alternatives. || Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "settlementDesc": "Not covered: Ask your doctor about alternatives.||Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "totalDrugCost": "164.75",
+              "totalDrugCostAnnual": "1977.00",
+              "totalDrugCostPerUnitAnnual": "N/A",
+              "totalQuantity": "30.0",
+              "rejectMessage": [
+                {
+                  "settlementCode": "70",
+                  "settlementDesc": "Choose Another Pharmacy:This one isn't covered. This location does not offer vaccines.|| Seleccione otra farmacia: Esta farmacia no tiene cobertura."
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "No Benefits Available:System could not process your request.Call us at the toll-free number on your benefit ID card.||No hay beneficios disponibles: El sistema no ha podido procesar su request.Call nosotros al número gratuito que aparece en su tarjeta de identificación de beneficios."
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "Not Covered:Either it's too soon to refill this drug or the drug conflicts with other medications in your profile.|| Sin cobertura: Es demasiado pronto para repetir la receta de este medicamento o el medicamento entra en conflicto con otros medicamentos de su perfil."
+                }
+              ]
+            }
+          },
+          {
+            "drugName": "atorvastatin calcium",
+            "drugStrength": "10MG",
+            "drugForm": "TABLET",
+            "brand": "false",
+            "preferredDrug": "false",
+            "mailPrice": {
+              "copayEmployer": "N/A",
+              "costAnnual": "297.19",
+              "costEmployer": "273.1",
+              "costEmployerAnnual": "1107.57",
+              "costPerUnit": "N/A",
+              "costPerUnitAnnual": "N/A",
+              "costPerUnitEmployerAnnual": "N/A",
+              "costToday": "73.28",
+              "coverageGapDiscountAmountIndicator": "false",
+              "daysSupply": "90",
+              "deductible": "0.00",
+              "deductibleEmployer": "N/A",
+              "flexPayIndicator": "true",
+              "genericCoinsuranceIndicator": "false",
+              "healthcareReimbursementAcctAppliedAmount": "0.00",
+              "memberCopayAmount": "73.28",
+              "ndcId": "378395077",
+              "penalties": "0.00",
+              "penaltiesEmployer": "N/A",
+              "primary": "false",
+              "primaryClaimNumber": "153106067026000",
+              "primaryClaimSequenceNumber": "999",
+              "secondaryClaimNumber": "153106067044000",
+              "secondaryClaimSequenceNumber": "999",
+              "settlementCode": "1512",
+              "settlementCodes": "Not covered: Ask your doctor about alternatives.||Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "settlementDesc": "Not covered: Ask your doctor about alternatives.||Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "totalDrugCost": "346.38",
+              "totalDrugCostAnnual": "1404.76",
+              "totalDrugCostPerUnitAnnual": "N/A",
+              "totalQuantity": "90.0",
+              "rejectMessage": [
+                {
+                  "settlementCode": "70",
+                  "settlementDesc": "Choose Another Pharmacy:This one isn't covered. This location does not offer vaccines.|| Seleccione otra farmacia: Esta farmacia no tiene cobertura."
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "No Benefits Available:System could not process your request.Call us at the toll-free number on your benefit ID card.|| No hay beneficios disponibles: El sistema no ha podido procesar su request.Call nosotros al número gratuito que aparece en su tarjeta de identificación de beneficios.
+                        "
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "Not Covered:Either it's too soon to refill this drug or the drug conflicts with other medications in your profile.|| Sin cobertura: Es demasiado pronto para repetir la receta de este medicamento o el medicamento entra en conflicto con otros medicamentos de su perfil."
+                }
+              ]
+            },
+            "retailPrice": {
+              "copayEmployer": "N/A",
+              "costAnnual": "297.12",
+              "costEmployer": "63.39",
+              "costEmployerAnnual": "760.68",
+              "costPerUnit": "N/A",
+              "costPerUnitAnnual": "N/A",
+              "costPerUnitEmployerAnnual": "N/A",
+              "costToday": "24.76",
+              "coverageGapDiscountAmountIndicator": "false",
+              "daysSupply": "30",
+              "deductible": "0.00",
+              "deductibleEmployer": "N/A",
+              "flexPayIndicator": "false",
+              "genericCoinsuranceIndicator": "false",
+              "healthcareReimbursementAcctAppliedAmount": "0.00",
+              "memberCopayAmount": "24.76",
+              "ndcId": "378395077",
+              "penalties": "-0.00",
+              "penaltiesEmployer": "N/A",
+              "primary": "false",
+              "primaryClaimNumber": "153106066698000",
+              "primaryClaimSequenceNumber": "999",
+              "secondaryClaimNumber": "153106066748000",
+              "secondaryClaimSequenceNumber": "999",
+              "settlementCode": "1512",
+              "settlementCodes": "Not covered: Ask your doctor about alternatives.||Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "settlementDesc": "Not covered: Ask your doctor about alternatives.||Sin cobertura: Consulte a su médico acerca de las alternativas.",
+              "totalDrugCost": "88.15",
+              "totalDrugCostAnnual": "1057.80",
+              "totalDrugCostPerUnitAnnual": "N/A",
+              "totalQuantity": "30.0",
+              "rejectMessage": [
+                {
+                  "settlementCode": "70",
+                  "settlementDesc": "Choose Another Pharmacy:This one isn't covered. This location does not offer vaccines.||Seleccione otra farmacia: Esta farmacia no tiene cobertura."
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "No Benefits Available:System could not process your request.Call us at the toll-free number on your benefit ID card.||No hay beneficios disponibles: El sistema no ha podido procesar su request.Call nosotros al número gratuito que aparece en su tarjeta de identificación de beneficios."
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "Not Covered:Either it's too soon to refill this drug or the drug conflicts with other medications in your profile. || Sin cobertura: Es demasiado pronto para repetir la receta de este medicamento o el medicamento entra en conflicto con otros medicamentos de su perfil."
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "Sorry, the system is temporarily unavailable to process your request. Please try again later. Thank you.||Lo sentimos, el sistema está temporalmente fuera de servicio y no se puede procesar su solicitud. Intente de nuevo más tarde. Gracias. "
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "Sorry, the system is temporarily unavailable to process your request. Please try again later. Thank you.||Lo sentimos, el sistema está temporalmente fuera de servicio y no se puede procesar su solicitud. Intente de nuevo más tarde. Gracias. "
+                },
+                {
+                  "settlementCode": "312",
+                  "settlementDesc": "Sorry, the system is temporarily unavailable to process your request. Please try again later. Thank you.||Lo sentimos, el sistema está temporalmente fuera de servicio y no se puede procesar su solicitud. Intente de nuevo más tarde. Gracias. "
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
