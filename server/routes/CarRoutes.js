@@ -28,7 +28,7 @@ exports.getAccountsRoute = (req,res) => {
 
 exports.getDrugTypeRoute = (req,res) => {
 
-    res.json(drugTypeJsonFile);
+    res.json(drugPriceJsonFile);
 }
 
 exports.getDrugPriceRoute = (req,res) => {
