@@ -4,7 +4,7 @@ var carDriverJsonFile = require("../models/Car-Driver.json");
 var airlinesJsonFile = require("../models/Airlines.json");
 var accountsJsonFile = require("../models/Accounts.json");
 var drugPriceJsonFile = require("../models/DrugPrice.json");
-var drugTypeJsonFile = require("../models/DrugType.json");
+/*var drugTypeJsonFile = require("../models/DrugType.json");*/
 
 exports.getCarRoute = (req,res) => {
 
