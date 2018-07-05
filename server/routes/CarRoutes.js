@@ -12,7 +12,7 @@ exports.getCarRoute = (req,res) => {
 }
 
 exports.getCarDriverRoute = (req,res) => {
-    res.status(5500).url('www.kd.com').json(carDriverJsonFile);
+    res.status(5500).json(carDriverJsonFile);
 }
 
 exports.getAirlinesRoute = (req,res) => {
