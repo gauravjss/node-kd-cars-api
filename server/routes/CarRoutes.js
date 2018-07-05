@@ -7,13 +7,14 @@ var drugPriceJsonFile = require("../models/DrugPrice.json");
 /*var drugTypeJsonFile = require("../models/DrugType.json");*/
 
 exports.getCarRoute = (req,res) => {
-        res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
-        res.append('Warning', '199 Miscellaneous warning');
+
         res.json(carJsonFile);
 }
 
 exports.getCarDriverRoute = (req,res) => {
-
+    res.type('json');
+    res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
+    res.append('Warning', '199 Miscellaneous warning');
     res.json(carDriverJsonFile);
 }
 
