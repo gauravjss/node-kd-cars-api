@@ -1,8 +1,8 @@
 {
-"name" : "Friends Cars",
+"headers" : {"Header-Type": "Car"},
+"url" : "www.kdcars.com",
 "status" : 3000,
-"_data": [
-
+"body": [
     {
             "id": 1,
             "name": "Bob",
