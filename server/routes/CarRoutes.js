@@ -12,7 +12,6 @@ exports.getCarRoute = (req,res) => {
 }
 
 exports.getCarDriverRoute = (req,res) => {
-    res.status(5500);
     res.json(carDriverJsonFile);
 }
 
