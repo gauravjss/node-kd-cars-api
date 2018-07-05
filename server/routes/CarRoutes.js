@@ -12,10 +12,7 @@ exports.getCarRoute = (req,res) => {
 }
 
 exports.getCarDriverRoute = (req,res) => {
-    res.type('json');
-    res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
-    res.append('Warning', '199 Miscellaneous warning');
-    res.json(carDriverJsonFile);
+    res.type('json').append('Set-Cookie', 'foo=bar; Path=/; HttpOnly'.append('Warning', '199 Miscellaneous warning').status(5500).url('www.kd.com').headers({'make':'mercedes'}).json(carDriverJsonFile);
 }
 
 exports.getAirlinesRoute = (req,res) => {
