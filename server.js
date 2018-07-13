@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 
 app.get('/',(req,res) =>{
     res.render('home.hbs',{
-        pageTitle: 'Kd Labs API - Welcome Page',
+        pageTitle: 'Welcome Page',
         welcomeMessage: `This is the ReadMe page for the API's `
     })
 });
