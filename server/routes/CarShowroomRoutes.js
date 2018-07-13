@@ -30,6 +30,14 @@ exports.postRoute  = (req, res) => {
     })
 }
 
+exports.bulkPostRoute  = (req, res) => {
+    console.log(req.body);
+    Showroom.insertMany(req.body);
+    res.send(req.body);
+}
+
+
+
 
 exports.getByIdRoute = (req,res) => {
     const id = req.params.id;

@@ -53,6 +53,7 @@ app.get('/kdCars', ShowRoomRoutes.getRoute);
 app.get('/kdCars/:id', ShowRoomRoutes.getByIdRoute);
 app.delete('/kdCars/:id', ShowRoomRoutes.deleteRoute);
 app.patch('/kdCars/:id', ShowRoomRoutes.patchRoute);
+app.post('/kdCars/bulkPost',ShowRoomRoutes.bulkPostRoute);
 
 
 app.get('/cars', CarRoutes.getCarRoute);
