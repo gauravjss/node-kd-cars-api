@@ -50,6 +50,9 @@ app.patch('/todos/:id', TodoRoutes.patchRoute);
 
 app.post('/kdCars', ShowRoomRoutes.postRoute);
 app.get('/kdCars', ShowRoomRoutes.getRoute);
+app.get('/kdCars/:id', ShowRoomRoutes.getByIdRoute);
+app.delete('/kdCars/:id', ShowRoomRoutes.deleteRoute);
+app.patch('/kdCars/:id', ShowRoomRoutes.patchRoute);
 
 
 app.get('/cars', CarRoutes.getCarRoute);
