@@ -23,7 +23,7 @@ hbs.registerHelper('screamIt' ,(text)=> text.toUpperCase());
 app.set('view engine or anything else','hbs');
 
 // Sharing the static folder to public -- This is Middleware Registering
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/views'));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
