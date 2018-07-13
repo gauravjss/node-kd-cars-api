@@ -3,9 +3,9 @@ const hbs = require('hbs');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-var TodoRoutes = require('./routes/TodoRoutes');
-var CarRoutes = require('./routes/CarRoutes');
-var {mongoose} = require('./db/mongoose');
+var TodoRoutes = require('./server/routes/TodoRoutes');
+var CarRoutes = require('./server/routes/CarRoutes');
+var {mongoose} = require('./server/db/mongoose');
 
 var app = express();
 const port = process.env.PORT || 3000;
