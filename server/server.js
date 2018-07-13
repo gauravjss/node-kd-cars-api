@@ -13,16 +13,17 @@ const port = process.env.PORT || 3000;
 // Setting up the Partial Directory to Handlebar
 hbs.registerPartials(__dirname + '../../views/partials');
 
-
 // Helper without Args.
 hbs.registerHelper('getCurrentYear',()=> new Date().getFullYear());
 
 // Helper with Parameters
 hbs.registerHelper('screamIt' ,(text)=> text.toUpperCase());
 
-
 // Setting Up View Engine as Handlebar
 app.set('view engine or anything else','hbs');
+
+// Sharing the static folder to public -- This is Middleware Registering
+app.use(express.static(__dirname + '/public'));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
