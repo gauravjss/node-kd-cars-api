@@ -11,7 +11,7 @@ var app = express();
 const port = process.env.PORT || 3000;
 
 // Setting up the Partial Directory to Handlebar
-hbs.registerPartials(__dirname + '../../views/partials');
+hbs.registerPartials(__dirname + '/views/partials');
 
 // Helper without Args.
 hbs.registerHelper('getCurrentYear',()=> new Date().getFullYear());
