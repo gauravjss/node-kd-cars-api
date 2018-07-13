@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 var TodoRoutes = require('./server/routes/TodoRoutes');
 var CarRoutes = require('./server/routes/CarRoutes');
+var ShowRoomRoutes = require('./server/routes/CarShowroomRoutes')
 var {mongoose} = require('./server/db/mongoose');
 
 var app = express();
@@ -35,7 +36,7 @@ app.use(bodyParser.json());
 
 app.get('/',(req,res) =>{
     res.render('home.hbs',{
-        pageTitle: 'Welcome Page',
+        pageTitle: 'Kd Labs API - Welcome Page',
         welcomeMessage: `This is the ReadMe page for the API's `
     })
 });
@@ -47,6 +48,10 @@ app.get('/todos/:id', TodoRoutes.getByIdRoute);
 app.delete('/todos/:id', TodoRoutes.deleteRoute);
 app.patch('/todos/:id', TodoRoutes.patchRoute);
 
+app.post('/kdCars', ShowRoomRoutes.postRoute);
+app.get('/kdCars', ShowRoomRoutes.getRoute);
+
+
 app.get('/cars', CarRoutes.getCarRoute);
 app.get('/driverCars', CarRoutes.getCarDriverRoute);
 app.get('/airlines', CarRoutes.getAirlinesRoute);
@@ -54,6 +59,10 @@ app.get('/accounts', CarRoutes.getAccountsRoute);
 app.get('/drugType', CarRoutes.getDrugTypeRoute);
 app.get('/drugPrice', CarRoutes.getDrugPriceRoute);
 
+
+app.all('*', function(req, res) {
+    res.redirect('/');
+});
 
 app.listen(port, () => {
     console.log(`Started up at Port ${port}`);
