@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>KdLabs API - {{pageTitle}}  </title>
@@ -11,52 +11,21 @@
     <div class="row">
         <div class="col-12">
             {{> header}}
-            <div id="doc-body" class="">  <div class="row row-no-padding row-eq-height" id="intro">
+            <div id="doc-body" class="">  
+                <div class="row row-no-padding row-eq-height" id="intro">
                 <div class="col-md-6 col-xs-12 section">
                     <div class="api-information">
-                        <div class="collection-name">
-                            <p>todo-app</p>
-                        </div>
                         <div class="collection-description"><h1 id="introduction">Introduction</h1>
-                            <p>This is a TO-DO API for adding tasks in a TO-DO list. </p>
-                            <h1 id="overview">Overview</h1>
-                            <p>Things that the developers should know about</p>
-                            <h1 id="authentication">Authentication</h1>
-                            <p>What is the preferred way of using the API?</p>
-                            <h1 id="error-codes">Error Codes</h1>
-                            <p>What errors and status codes can a user expect?</p>
-                            <h1 id="rate-limit">Rate limit</h1>
-                            <p>Is there a limit to the number of requests an user can send?</p>
+                            <p>This is a TO-DO API for adding tasks in a TO-DO list, by default the tasks are not complete.</p>
+
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12 examples">
-                    <div class="language hidden-xs hidden-sm">
-                        <div class="language-heading">Language</div>
-                        <div class="btn-group languages">
-                            <button type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="active-lang ellipsis">Node</div>
-                                <span class="pm-doc-sprite pm-doc-sprite-dropdown-caret"></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right language_dropdown">
-                                <li class="dropdown-menu-item" data-snippetname="shell:curl">cURL</li>
-                                <li class="dropdown-menu-item" data-snippetname="javascript:jquery">jQuery</li>
-                                <li class="dropdown-menu-item" data-snippetname="ruby:native">Ruby</li>
-                                <li class="dropdown-menu-item" data-snippetname="python:requests">Python Requests</li>
-                                <li class="dropdown-menu-item" data-snippetname="node:native">Node</li>
-                                <li class="dropdown-menu-item" data-snippetname="php:curl">PHP</li>
-                                <li class="dropdown-menu-item" data-snippetname="go:native">Go</li>
-                            </ul>
+                    <div class="col-md-6 col-xs-12 examples">
+                        <div class="sample-request">
+                        <p style="color: white;">Users can Add, Query, Delete tasks and also Update the text and completion status of the tasks making it useful for a simple To-Do App.</p>
                         </div>
                     </div>
-
-                    <div class="hidden-xs hidden-sm sidebar-error">
-                        <p class="heading">Could not load examples for this collection</p>
-                        <button class="btn btn-default retry-button" id="retryLoadingExamples">Retry</button>
-                    </div>
-                    <div class="hidden-xs hidden-sm sidebar-loader spinner"></div>
-                </div>
-
             </div>
                 <div class="row row-no-padding row-eq-height" id="f92a0ab6-0802-4b14-9afc-6278eed10eaf">
                     <div class="col-md-6 col-xs-12 section">
@@ -108,7 +77,8 @@
 
                         <div class="request code-snippet">
                             <div class="formatted-requests is-default" data-lang="Node" data-id="f92a0ab6-0802-4b14-9afc-6278eed10eaf_0">
-            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf">var http = require("http");
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript">
+                <code class="language-javascript" id="Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf">var http = require("http");
 
 var options = {
   "method": "GET",
@@ -138,7 +108,6 @@ var req = http.request(options, function (res) {
 
 req.end();</code></pre>
                                 <!-- Button over the expand overlay -->
-                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
                             </div>
                         </div>
 
@@ -195,7 +164,8 @@ req.end();</code></pre>
 
                         <div class="request code-snippet">
                             <div class="formatted-requests is-default" data-lang="Node" data-id="ef7c61cd-1ee1-473c-9f93-e634d92ea8e6_0">
-            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6">var http = require("http");
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript">
+                <code class="language-javascript" id="Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6">var http = require("http");
 
 var options = {
   "method": "POST",
@@ -226,7 +196,6 @@ var req = http.request(options, function (res) {
 req.write(JSON.stringify({ text: 'Return Book to Library' }));
 req.end();</code></pre>
                                 <!-- Button over the expand overlay -->
-                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
                             </div>
                         </div>
 
@@ -265,7 +234,8 @@ req.end();</code></pre>
 
                         <div class="request code-snippet">
                             <div class="formatted-requests is-default" data-lang="Node" data-id="7fb67fc6-86c6-470e-85b7-37aa829d0d57_0">
-            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57">var http = require("http");
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript">
+                <code class="language-javascript" id="Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57">var http = require("http");
 
 var options = {
   "method": "GET",
@@ -294,7 +264,6 @@ var req = http.request(options, function (res) {
 
 req.end();</code></pre>
                                 <!-- Button over the expand overlay -->
-                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
                             </div>
                         </div>
 
@@ -333,7 +302,8 @@ req.end();</code></pre>
 
                         <div class="request code-snippet">
                             <div class="formatted-requests is-default" data-lang="Node" data-id="9cd0ed68-9b97-4354-a5a5-c48a053d30cf_0">
-            <pre class="click-to-expand-wrapper is-snippet-wrapper language-javascript is-expandable"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf">var http = require("http");
+            <pre class="click-to-expand-wrapper is-snippet-wrapper language-javascript is-expandable">
+                <code class="language-javascript" id="Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf">var http = require("http");
 
 var options = {
   "method": "DELETE",
@@ -362,7 +332,6 @@ var req = http.request(options, function (res) {
 
 req.end();</code></pre>
                                 <!-- Button over the expand overlay -->
-                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
                             </div>
                         </div>
 
@@ -419,7 +388,8 @@ req.end();</code></pre>
 
                         <div class="request code-snippet">
                             <div class="formatted-requests is-default" data-lang="Node" data-id="ecfc080e-1205-405f-be3b-ea2a93e85e35_0">
-            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35">var http = require("http");
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable">
+                <code class="language-javascript" id="Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35">var http = require("http");
 
 var options = {
   "method": "PATCH",
@@ -451,7 +421,6 @@ var req = http.request(options, function (res) {
 req.write(JSON.stringify({ completed: false }));
 req.end();</code></pre>
                                 <!-- Button over the expand overlay -->
-                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
                             </div>
                         </div>
 
