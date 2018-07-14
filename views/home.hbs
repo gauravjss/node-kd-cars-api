@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+
     <meta charset="UTF-8">
     <title>KdLabs API - {{pageTitle}}  </title>
 </head>
 <body>
+<div class="container padding-top">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{pageTitle}}</h1>
 
-{{> header}}
-<!--Calling function with argument-->
-<p class="test">{{screamIt welcomeMessage}}</p>
+        <p><a href="/kdCarsApi">Car Showroom API</a></p>
+        <p><a href="/todosApi">TO-DO API</a></p>
 
-<!-- Adding Partial-->
-{{> footer}}
+        {{> footer}}
+        </div>
+    </div>
+</div>
 </body>
 </html>

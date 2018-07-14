@@ -1,0 +1,468 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>KdLabs API - {{pageTitle}}  </title>
+</head>
+<body>
+
+<div class="container padding-top">
+    <div class="row">
+        <div class="col-12">
+            {{> header}}
+            <div id="doc-body" class="">  <div class="row row-no-padding row-eq-height" id="intro">
+                <div class="col-md-6 col-xs-12 section">
+                    <div class="api-information">
+                        <div class="collection-name">
+                            <p>todo-app</p>
+                        </div>
+                        <div class="collection-description"><h1 id="introduction">Introduction</h1>
+                            <p>This is a TO-DO API for adding tasks in a TO-DO list. </p>
+                            <h1 id="overview">Overview</h1>
+                            <p>Things that the developers should know about</p>
+                            <h1 id="authentication">Authentication</h1>
+                            <p>What is the preferred way of using the API?</p>
+                            <h1 id="error-codes">Error Codes</h1>
+                            <p>What errors and status codes can a user expect?</p>
+                            <h1 id="rate-limit">Rate limit</h1>
+                            <p>Is there a limit to the number of requests an user can send?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 examples">
+                    <div class="language hidden-xs hidden-sm">
+                        <div class="language-heading">Language</div>
+                        <div class="btn-group languages">
+                            <button type="button" class="btn btn-default dropdown-toggle language-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="active-lang ellipsis">Node</div>
+                                <span class="pm-doc-sprite pm-doc-sprite-dropdown-caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right language_dropdown">
+                                <li class="dropdown-menu-item" data-snippetname="shell:curl">cURL</li>
+                                <li class="dropdown-menu-item" data-snippetname="javascript:jquery">jQuery</li>
+                                <li class="dropdown-menu-item" data-snippetname="ruby:native">Ruby</li>
+                                <li class="dropdown-menu-item" data-snippetname="python:requests">Python Requests</li>
+                                <li class="dropdown-menu-item" data-snippetname="node:native">Node</li>
+                                <li class="dropdown-menu-item" data-snippetname="php:curl">PHP</li>
+                                <li class="dropdown-menu-item" data-snippetname="go:native">Go</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hidden-xs hidden-sm sidebar-error">
+                        <p class="heading">Could not load examples for this collection</p>
+                        <button class="btn btn-default retry-button" id="retryLoadingExamples">Retry</button>
+                    </div>
+                    <div class="hidden-xs hidden-sm sidebar-loader spinner"></div>
+                </div>
+
+            </div>
+                <div class="row row-no-padding row-eq-height" id="f92a0ab6-0802-4b14-9afc-6278eed10eaf">
+                    <div class="col-md-6 col-xs-12 section">
+                        <div class="api-information">
+                            <div class="heading">
+                                <div class="name">
+                                    <span class="GET method">GET</span>
+                                    GET/todos
+                                </div>
+                            </div>
+                            <div class="url">https://kd-cars-api.herokuapp.com/todos</div>
+                            <div class="description"></div>
+
+                            <div class="headers">
+                                <div class="heading">HEADERS</div>
+                                <hr>
+                                <div class="param row">
+                                    <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                    <div class="value col-md-9 col-xs-12">application/json</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="request-body">
+                                <div class="body-heading">BODY</div>
+                                <hr>
+                                <div class="raw-body code-snippet">
+            <pre class="body-block click-to-expand-wrapper is-snippet-wrapper language-javascript"><code class="body-block language-javascript">{
+	"text": "Return Book to Library"
+}</code></pre>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <br><br>
+                    </div>
+
+
+                    <div class="col-md-6 col-xs-12 examples">
+                        <div class="sample-request">
+                            <div class="heading"><span>Example Request</span></div>
+
+                            <div class="responses-index">
+                                <div class="response-name"><span>GET/todos</span></div>
+                            </div>
+                        </div>
+
+                        <div class="request code-snippet">
+                            <div class="formatted-requests is-default" data-lang="Node" data-id="f92a0ab6-0802-4b14-9afc-6278eed10eaf_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf">var http = require("http");
+
+var options = {
+  "method": "GET",
+  "hostname": [
+    "https://kd-cars-api.herokuapp.com"
+  ],
+  "path": [
+    "todos"
+  ],
+  "headers": {
+    "Content-Type": "application/json"
+  }
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.end();</code></pre>
+                                <!-- Button over the expand overlay -->
+                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_f92a0ab6-0802-4b14-9afc-6278eed10eaf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row row-no-padding row-eq-height" id="ef7c61cd-1ee1-473c-9f93-e634d92ea8e6">
+                    <div class="col-md-6 col-xs-12 section">
+                        <div class="api-information">
+                            <div class="heading">
+                                <div class="name">
+                                    <span class="POST method">POST</span>
+                                    POST/todos
+                                </div>
+                            </div>
+                            <div class="url">https://kd-cars-api.herokuapp.com/todos</div>
+                            <div class="description"></div>
+
+                            <div class="headers">
+                                <div class="heading">HEADERS</div>
+                                <hr>
+                                <div class="param row">
+                                    <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                    <div class="value col-md-9 col-xs-12">application/json</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="request-body">
+                                <div class="body-heading">BODY</div>
+                                <hr>
+                                <div class="raw-body code-snippet">
+            <pre class="body-block click-to-expand-wrapper is-snippet-wrapper language-javascript"><code class="body-block language-javascript">{
+	"text": "Return Book to Library"
+}</code></pre>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <br><br>
+                    </div>
+
+
+                    <div class="col-md-6 col-xs-12 examples">
+                        <div class="sample-request">
+                            <div class="heading"><span>Example Request</span></div>
+
+                            <div class="responses-index">
+                                <div class="response-name"><span>POST/todos</span></div>
+                            </div>
+                        </div>
+
+                        <div class="request code-snippet">
+                            <div class="formatted-requests is-default" data-lang="Node" data-id="ef7c61cd-1ee1-473c-9f93-e634d92ea8e6_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6">var http = require("http");
+
+var options = {
+  "method": "POST",
+  "hostname": [
+    "https://kd-cars-api.herokuapp.com"
+  ],
+  "path": [
+    "todos"
+  ],
+  "headers": {
+    "Content-Type": "application/json"
+  }
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.write(JSON.stringify({ text: 'Return Book to Library' }));
+req.end();</code></pre>
+                                <!-- Button over the expand overlay -->
+                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_ef7c61cd-1ee1-473c-9f93-e634d92ea8e6" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row row-no-padding row-eq-height" id="7fb67fc6-86c6-470e-85b7-37aa829d0d57">
+                    <div class="col-md-6 col-xs-12 section">
+                        <div class="api-information">
+                            <div class="heading">
+                                <div class="name">
+                                    <span class="GET method">GET</span>
+                                    GET/todos/:id
+                                </div>
+                            </div>
+                            <div class="url">https://kd-cars-api.herokuapp.com/todos/5ad23989558e3a2a144bdb29</div>
+                            <div class="description"></div>
+
+
+
+
+
+                        </div>
+                        <br><br>
+                    </div>
+
+
+                    <div class="col-md-6 col-xs-12 examples">
+                        <div class="sample-request">
+                            <div class="heading"><span>Example Request</span></div>
+
+                            <div class="responses-index">
+                                <div class="response-name"><span>GET/todos/:id</span></div>
+                            </div>
+                        </div>
+
+                        <div class="request code-snippet">
+                            <div class="formatted-requests is-default" data-lang="Node" data-id="7fb67fc6-86c6-470e-85b7-37aa829d0d57_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable language-javascript"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57">var http = require("http");
+
+var options = {
+  "method": "GET",
+  "hostname": [
+    "https://kd-cars-api.herokuapp.com"
+  ],
+  "path": [
+    "todos",
+    "5ad23989558e3a2a144bdb29"
+  ],
+  "headers": {}
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.end();</code></pre>
+                                <!-- Button over the expand overlay -->
+                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_7fb67fc6-86c6-470e-85b7-37aa829d0d57" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row row-no-padding row-eq-height" id="9cd0ed68-9b97-4354-a5a5-c48a053d30cf">
+                    <div class="col-md-6 col-xs-12 section">
+                        <div class="api-information">
+                            <div class="heading">
+                                <div class="name">
+                                    <span class="DELETE method">DELETE</span>
+                                    DELETE/todos/:id
+                                </div>
+                            </div>
+                            <div class="url">https://kd-cars-api.herokuapp.com/todos/5ad24437b87df25e</div>
+                            <div class="description"></div>
+
+
+
+
+
+                        </div>
+                        <br><br>
+                    </div>
+
+
+                    <div class="col-md-6 col-xs-12 examples">
+                        <div class="sample-request">
+                            <div class="heading"><span>Example Request</span></div>
+
+                            <div class="responses-index">
+                                <div class="response-name"><span>DELETE/todos/:id</span></div>
+                            </div>
+                        </div>
+
+                        <div class="request code-snippet">
+                            <div class="formatted-requests is-default" data-lang="Node" data-id="9cd0ed68-9b97-4354-a5a5-c48a053d30cf_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper language-javascript is-expandable"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf">var http = require("http");
+
+var options = {
+  "method": "DELETE",
+  "hostname": [
+    "https://kd-cars-api.herokuapp.com"
+  ],
+  "path": [
+    "todos",
+    "5ad24437b87df25e"
+  ],
+  "headers": {}
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.end();</code></pre>
+                                <!-- Button over the expand overlay -->
+                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_9cd0ed68-9b97-4354-a5a5-c48a053d30cf" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row row-no-padding row-eq-height" id="ecfc080e-1205-405f-be3b-ea2a93e85e35">
+                    <div class="col-md-6 col-xs-12 section">
+                        <div class="api-information">
+                            <div class="heading">
+                                <div class="name">
+                                    <span class="PATCH method">PATCH</span>
+                                    PATCH/todos/:id
+                                </div>
+                            </div>
+                            <div class="url">https://kd-cars-api.herokuapp.com/todos/5ad23b51c9a56c47484d0285</div>
+                            <div class="description"></div>
+
+                            <div class="headers">
+                                <div class="heading">HEADERS</div>
+                                <hr>
+                                <div class="param row">
+                                    <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                    <div class="value col-md-9 col-xs-12">application/json</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="request-body">
+                                <div class="body-heading">BODY</div>
+                                <hr>
+                                <div class="raw-body code-snippet">
+            <pre class="body-block click-to-expand-wrapper is-snippet-wrapper"><code class="body-block language-javascript">{
+	"completed": false
+}</code></pre>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <br><br>
+                    </div>
+
+
+                    <div class="col-md-6 col-xs-12 examples">
+                        <div class="sample-request">
+                            <div class="heading"><span>Example Request</span></div>
+
+                            <div class="responses-index">
+                                <div class="response-name"><span>PATCH/todos/:id</span></div>
+                            </div>
+                        </div>
+
+                        <div class="request code-snippet">
+                            <div class="formatted-requests is-default" data-lang="Node" data-id="ecfc080e-1205-405f-be3b-ea2a93e85e35_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable"><button class="btn btn-sm pull-right copy-request copy-request-modal" data-clipboard-target="#Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code class="language-javascript" id="Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35">var http = require("http");
+
+var options = {
+  "method": "PATCH",
+  "hostname": [
+    "https://kd-cars-api.herokuapp.com"
+  ],
+  "path": [
+    "todos",
+    "5ad23b51c9a56c47484d0285"
+  ],
+  "headers": {
+    "Content-Type": "application/json"
+  }
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.write(JSON.stringify({ completed: false }));
+req.end();</code></pre>
+                                <!-- Button over the expand overlay -->
+                                <button class="btn btn-sm pull-right copy-request" data-clipboard-target="#Node_0_ecfc080e-1205-405f-be3b-ea2a93e85e35" data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            {{> footer}}
+        </div>
+    </div>
+</div>
+</body>
+</html>

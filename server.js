@@ -36,9 +36,21 @@ app.use(bodyParser.json());
 
 app.get('/',(req,res) =>{
     res.render('home.hbs',{
-        pageTitle: 'Welcome Page',
+        pageTitle: 'Welcome to KD API',
         welcomeMessage: `This is the ReadMe page for the API's `
     })
+});
+
+app.get('/kdCarsApi',(req,res) =>{
+    res.render('cars.hbs',{
+        pageTitle:'Car Showroom API',
+    });
+});
+
+app.get('/todosApi',(req,res) =>{
+    res.render('todos.hbs',{
+        pageTitle:'TO-DO API',
+    });
 });
 
 
