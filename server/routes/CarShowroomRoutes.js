@@ -1,7 +1,7 @@
 var {Showroom} = require('../models/showroom');
 const {ObjectID} = require('mongodb');
 const _ = require('lodash');
-const carJSON = require('../models/Cars')
+var carJSON = require('../models/Cars')
 
 
 exports.getRoute = (req,res) => {
@@ -52,31 +52,25 @@ exports.postRoute  = (req, res) => {
 
 exports.bulkPostRoute  = (req, res) => {
 
-    req.body =  _.uniqBy(req.body, 'Name');
-
-    console.log(`Request Body Length ${req.body.length}`);
-    Showroom.insertMany(req.body).then((doc) => {
-        res.send({
-            message:`${doc.length} Records Created`,
-            code: 200
+    var requestCars = req.body;
+    if(req.header('user') && req.header('user') === 'admin'){
+        requestCars = carJSON;
+    }
+    requestCars =  _.uniqBy(requestCars, 'Name');
+    Showroom.find().then((dbCars) => {
+        requestCars = _.differenceBy(requestCars, dbCars,'Name');
+    }).then(() =>{
+        console.log(requestCars);
+        Showroom.insertMany(requestCars).then((doc) => {
+            res.send({
+                message:`${doc.length} Records Created`,
+                code: 200
+            });
+        }, (e) => {
+            res.status(400).send(e);
         });
-    }, (e) => {
-        res.status(400).send(e);
     });
 }
-
-exports.adminBulkPost  = (req, res) => {
-
-    Showroom.insertMany(carJSON).then((doc) => {
-        res.send({
-            message:`${doc.length} Records Created`,
-            code: 200
-        });
-    }, (e) => {
-        res.status(400).send(e);
-    });
-}
-
 
 exports.getByIdRoute = (req,res) => {
     const id = req.params.id;
