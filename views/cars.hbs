@@ -18,13 +18,19 @@
                 <p>This API enables a user to create, modify, delete and fetch the car records from the showroom DB.</p>
                 <h1 id="overview">Overview</h1>
                 <p>Apart from the DB primary key, the car Name property has been identified as primary and no 2 cars can have exact same name</p>
+                <h1 id="rate-limit">Rate limit</h1>
+                <p >Bulk Car update can be maximum of 50 MB JSON data.</p>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-xs-12 examples">
         <div class="sample-request">
-            <h1 id="rate-limit" style="color: white;">Rate limit</h1>
-            <p style="color: white;">Bulk Car update can be maximum of 50 MB JSON data.</p>
+
+            <h1 id="rate-limit" style="color: white;">Error Codes</h1>
+            <p style="color: white;"> Code: 505 , Message: Record already exists while inserting new Car </p>
+            <p style="color: white;"> Code: 506 , Message: Trying to insert multiple records with single insert service </p>
+            <p style="color: white;"> Code: 404 , Message: ID input for the car in INVALID </p>
+            <p style="color: white;"> Code: 405 , Message: There is no matching Car with the input ID </p>
         </div>
     </div>
 </div>

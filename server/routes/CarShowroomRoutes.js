@@ -86,7 +86,7 @@ exports.getByIdRoute = (req,res) => {
                 code:'message from KD Cars'
             })
         }else{
-            res.status(404).send({
+            res.status(405).send({
                 message:'There is no Car with this ID',
                 code:'message from KD Cars'
             })
