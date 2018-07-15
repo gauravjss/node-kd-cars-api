@@ -32,7 +32,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 
 app.get('/',(req,res) =>{
     res.render('home.hbs',{
@@ -66,7 +67,7 @@ app.get('/kdCars/:id', ShowRoomRoutes.getByIdRoute);
 app.delete('/kdCars/:id', ShowRoomRoutes.deleteRoute);
 app.patch('/kdCars/:id', ShowRoomRoutes.patchRoute);
 app.post('/kdCars/bulkPost',ShowRoomRoutes.bulkPostRoute);
-
+app.post('/kdCars/adminBulkPost',ShowRoomRoutes.adminBulkPost);
 
 app.get('/cars', CarRoutes.getCarRoute);
 app.get('/driverCars', CarRoutes.getCarDriverRoute);

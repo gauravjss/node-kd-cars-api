@@ -1,13 +1,14 @@
 var {Showroom} = require('../models/showroom');
 const {ObjectID} = require('mongodb');
 const _ = require('lodash');
+const carJSON = require('../models/Cars')
 
 
 exports.getRoute = (req,res) => {
     Showroom.find().then((cars) =>{
         res.send({
             cars,
-            responseCode: 2000,
+            responseCode: 200,
             message:'Greetings from KD Car Showroom'
         })
     }, (e) => {
@@ -16,27 +17,65 @@ exports.getRoute = (req,res) => {
 }
 
 exports.postRoute  = (req, res) => {
-    console.log(req.body);
-    var car = new Showroom({
-        make: req.body.make,
-        model: req.body.model,
-        color: req.body.color,
-        mileage: req.body.mileage,
+    console.log(req.body.length);
+    if(req.body.length >1){
+        res.send({
+            message:`Please use Bulk Post service for multiple records`,
+            code: 506,
+            type: 'error'
+        })
+    }
+    Showroom.find({
+            Name : req.body.Name
+        },
+        function (err, docs) {
+        if (docs.length){
+            res.send({
+                message:`Record already exists for :: ${docs[0].Name} :: having ID :: ${docs[0]._id}`,
+                code: 505,
+                type: 'error'
+            });
+        }else{
+            Showroom.create(req.body).then((doc) => {
+                res.send({
+                    message:`Record created with ID :: ${doc._id}`,
+                    code: 200
+                });
+            }, (e) => {
+                res.status(400).send(e);
+            });
+        }
     });
-    car.save().then((doc) => {
-        res.send(doc);
-    },(e) => {
-        res.status(400).send(e);
-    })
+
+
 }
 
 exports.bulkPostRoute  = (req, res) => {
-    console.log(req.body);
-    Showroom.insertMany(req.body);
-    res.send(req.body);
+
+    req.body =  _.uniqBy(req.body, 'Name');
+
+    console.log(`Request Body Length ${req.body.length}`);
+    Showroom.insertMany(req.body).then((doc) => {
+        res.send({
+            message:`${doc.length} Records Created`,
+            code: 200
+        });
+    }, (e) => {
+        res.status(400).send(e);
+    });
 }
 
+exports.adminBulkPost  = (req, res) => {
 
+    Showroom.insertMany(carJSON).then((doc) => {
+        res.send({
+            message:`${doc.length} Records Created`,
+            code: 200
+        });
+    }, (e) => {
+        res.status(400).send(e);
+    });
+}
 
 
 exports.getByIdRoute = (req,res) => {
@@ -63,6 +102,7 @@ exports.getByIdRoute = (req,res) => {
         res.status(400).send(e);
     })
 }
+
 
 exports.deleteRoute = (req,res) => {
     const id = req.params.id;
@@ -91,7 +131,7 @@ exports.deleteRoute = (req,res) => {
 exports.patchRoute = (req,res) => {
 
     const id = req.params.id;
-    var body = _.pick(req.body,['make','model','color','mileage']);
+    var body = req.body; //_.pick(req.body,['Miles_per_Gallon','Cylinders','Displacement','Horsepower','Weight_in_lbs','Acceleration','Name','Year','Origin']);
 
     if(!ObjectID.isValid(id)){
         res.status(404).send('The ID is Invalid');
@@ -103,7 +143,7 @@ exports.patchRoute = (req,res) => {
             if(car){
                 res.send({
                     car,
-                    code:'Updated at DB'
+                    code:'Car Updated in Database'
                 })
             }
             else{
@@ -115,5 +155,4 @@ exports.patchRoute = (req,res) => {
         }, (e) => {
             res.status(400).send(e);
         });
-
 }
