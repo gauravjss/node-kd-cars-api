@@ -3,12 +3,14 @@ const hbs = require('hbs');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-var TodoRoutes = require('./server/routes/TodoRoutes');
-var CarRoutes = require('./server/routes/CarRoutes');
-var ShowRoomRoutes = require('./server/routes/CarShowroomRoutes')
-var {mongoose} = require('./server/db/mongoose');
+const TodoRoutes = require('./server/routes/TodoRoutes');
+const CarRoutes = require('./server/routes/CarRoutes');
+const ShowRoomRoutes = require('./server/routes/CarShowroomRoutes');
+const InventoryRoutes = require('./server/routes/InventoryManagerRoutes');
 
-var app = express();
+const {mongoose} = require('./server/db/mongoose');
+
+const app = express();
 const port = process.env.PORT || 3000;
 
 // Setting up the Partial Directory to Handlebar
@@ -67,6 +69,13 @@ app.get('/kdCars/:id', ShowRoomRoutes.getByIdRoute);
 app.delete('/kdCars/:id', ShowRoomRoutes.deleteRoute);
 app.patch('/kdCars/:id', ShowRoomRoutes.patchRoute);
 app.post('/kdCars/bulkPost',ShowRoomRoutes.bulkPostRoute);
+
+app.post('/kdInventoryManager', InventoryRoutes.postRoute);
+app.get('/kdInventoryManager', InventoryRoutes.getRoute);
+app.get('/kdInventoryManager/:id', InventoryRoutes.getByIdRoute);
+app.delete('/kdInventoryManager/:id', InventoryRoutes.deleteRoute);
+app.patch('/kdInventoryManager/:id', InventoryRoutes.patchRoute);
+app.post('/kdInventoryManager/bulkPost',InventoryRoutes.bulkPostRoute);
 
 app.get('/cars', CarRoutes.getCarRoute);
 app.get('/driverCars', CarRoutes.getCarDriverRoute);
