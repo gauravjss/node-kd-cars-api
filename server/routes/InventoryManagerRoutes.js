@@ -30,7 +30,7 @@ exports.postRoute  = (req, res) => {
         function (err, docs) {
         if (docs.length){
             res.send({
-                message:`Record already exists for :: ${docs[0].Name} :: having ID :: ${docs[0]._id}`,
+                message:`Record already exists for :: ${docs[0].Name} ::`,
                 code: 505,
                 type: 'error'
             });
