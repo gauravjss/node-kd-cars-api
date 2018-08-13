@@ -79,7 +79,7 @@ app.post('/kdInventoryManager', InventoryRoutes.postRoute);
 app.get('/kdInventoryManager', InventoryRoutes.getRoute);
 app.get('/kdInventoryManager/:id', InventoryRoutes.getByIdRoute);
 app.delete('/kdInventoryManager/:id', InventoryRoutes.deleteRoute);
-app.patch('/kdInventoryManager/:id', InventoryRoutes.patchRoute);
+app.patch('/kdInventoryManager/:id/:update/:quantity', InventoryRoutes.patchRoute);
 app.post('/kdInventoryManager/bulkPost',InventoryRoutes.bulkPostRoute);
 
 app.get('/cars', CarRoutes.getCarRoute);

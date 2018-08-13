@@ -1,7 +1,6 @@
 var {Inventory} = require('../models/inventory');
 const {ObjectID} = require('mongodb');
 const _ = require('lodash');
-//var carJSON = require('../models/Cars')
 
 
 exports.getRoute = (req,res) => {
@@ -92,7 +91,6 @@ exports.getByIdRoute = (req,res) => {
                 code:'message from KD Inventory'
             })
         }
-
     }, (e) => {
         res.status(400).send(e);
     })
@@ -125,7 +123,15 @@ exports.deleteRoute = (req,res) => {
 exports.patchRoute = (req,res) => {
 
     const id = req.params.id;
+    const update = req.params.update;
+    const quantity = req.params.quantity;
+
     const body = req.body; //_.pick(req.body,['Miles_per_Gallon','Cylinders','Displacement','Horsepower','Weight_in_lbs','Acceleration','Name','Year','Origin']);
+    if(update === 'IN'){
+        body.Quantity = + body.Quantity + +quantity;
+    }else if(update === 'OUT'){
+        body.Quantity = + body.Quantity - +quantity;
+    }
 
     if(!ObjectID.isValid(id)){
         res.status(404).send('The ID is Invalid');
