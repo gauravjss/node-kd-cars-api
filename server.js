@@ -12,6 +12,8 @@ const {mongoose} = require('./server/db/mongoose');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const cors = require('cors');
+
 
 // Setting up the Partial Directory to Handlebar
 hbs.registerPartials(__dirname + '/views/partials');
@@ -31,8 +33,11 @@ app.use(express.static(__dirname + '/views'));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "POST,GET,PUT,PATCH,DELETE,OPTIONS");
   next();
 });
+
+app.use(cors());
 
 //app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '50mb'}));

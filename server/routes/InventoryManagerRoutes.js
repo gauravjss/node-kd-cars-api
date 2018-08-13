@@ -17,7 +17,7 @@ exports.getRoute = (req,res) => {
 }
 
 exports.postRoute  = (req, res) => {
-    console.log(req.body.length);
+    console.log(req.body);
     if(req.body.length >1){
         res.send({
             message:`Please use Bulk Post service for multiple records`,
