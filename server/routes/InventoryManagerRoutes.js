@@ -143,6 +143,7 @@ exports.patchRoute = (req,res) => {
             if(item){
                 res.send({
                     item: item,
+                    status: 200,
                     code:'Item Updated in Database'
                 })
             }
