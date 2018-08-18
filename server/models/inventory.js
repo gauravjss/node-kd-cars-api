@@ -20,8 +20,10 @@ var Inventory = mongoose.model('kdInventory',{
         trim: true // Removes leading and trailing whitespaces
     },
     QR_Code: {
-        type: Number,
-        default: 0
+        type: String,
+        required: false,
+        minlength: 0,
+        trim: true // Removes leading and trailing whitespaces
     },
     Price: {
         type: Number,
