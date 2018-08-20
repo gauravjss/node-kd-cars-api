@@ -117,6 +117,7 @@ exports.deleteRoute = (req,res) => {
 }
 
 exports.postInventoryLogRoute = (req,res) =>{
+    console.log(req.body);
     let body = req.body;
     body.CompletedAt = new Date().getTime();
     console.log(body);
@@ -143,6 +144,7 @@ exports.getInventoryLogRoute = (req,res) =>{
 }
 
 exports.patchRoute = (req,res) => {
+    console.log(req.body);
     const id = req.params.id;
     const update = req.params.update;
     const quantity = req.params.quantity;
