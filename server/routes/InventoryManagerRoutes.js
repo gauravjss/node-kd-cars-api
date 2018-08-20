@@ -1,7 +1,7 @@
-var {Inventory} = require('../models/inventory');
+let {Inventory} = require('../models/inventory');
+let {InventoryLog} = require('../models/inventory_in_out_log');
 const {ObjectID} = require('mongodb');
 const _ = require('lodash');
-
 
 exports.getRoute = (req,res) => {
     Inventory.find().then((inventory) =>{
@@ -16,7 +16,6 @@ exports.getRoute = (req,res) => {
 }
 
 exports.postRoute  = (req, res) => {
-    console.log(req.body);
     if(req.body.length >1){
         res.send({
             message:`Please use Bulk Post service for multiple records`,
@@ -45,8 +44,6 @@ exports.postRoute  = (req, res) => {
             });
         }
     });
-
-
 }
 
 exports.bulkPostRoute  = (req, res) => {
@@ -117,11 +114,35 @@ exports.deleteRoute = (req,res) => {
     }, (e) => {
         res.status(400).send(e);
     });
+}
 
+exports.postInventoryLogRoute = (req,res) =>{
+    let body = req.body;
+    body.CompletedAt = new Date().getTime();
+    console.log(body);
+    InventoryLog.create(body).then((doc) => {
+        res.send({
+            message:`Record created with ID :: ${doc._id}`,
+            code: 200
+        });
+    }, (e) => {
+        res.status(400).send(e);
+    });
+}
+
+exports.getInventoryLogRoute = (req,res) =>{
+    InventoryLog.find().then((inventoryLog) =>{
+        res.send({
+            inventoryLog,
+            responseCode: 200,
+            message:'Greetings from KD Home Inventory'
+        })
+    }, (e) => {
+        res.status(400).send(e);
+    })
 }
 
 exports.patchRoute = (req,res) => {
-
     const id = req.params.id;
     const update = req.params.update;
     const quantity = req.params.quantity;
@@ -132,11 +153,9 @@ exports.patchRoute = (req,res) => {
     }else if(update === 'OUT'){
         body.Quantity = + body.Quantity - +quantity;
     }
-
     if(!ObjectID.isValid(id)){
         res.status(404).send('The ID is Invalid');
     }
-
     // new : true returns the updated object
     Inventory.findByIdAndUpdate(id, {$set: body},{new: true})
         .then((item) => {
