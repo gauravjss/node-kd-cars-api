@@ -25,13 +25,7 @@ const client = new Client({
 
 client.connect();
 
-client.query('SELECT * FROM "Inventory_Manager";', (err, res) => {
-  if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-  client.end();
-});
+
 
 // Setting up the Partial Directory to Handlebar
 hbs.registerPartials(__dirname + '/views/partials');
@@ -61,10 +55,19 @@ app.use(cors());
 app.use(bodyParser.json({limit: '50mb'}));
 
 app.get('/',(req,res) =>{
-    res.render('home.hbs',{
+  
+  client.query('SELECT * FROM "Inventory_Manager";', (err, resp) => {
+  if (err) throw err;
+  for (let row of resp.rows) {
+    console.log(JSON.stringify(row));
+  }
+   res.json(resp.rows); 
+  client.end();
+});
+   /* res.render('home.hbs',{
         pageTitle: 'Welcome to KD API',
         welcomeMessage: `This is the ReadMe page for the API's `
-    })
+    })*/
 });
 
 app.get('/kdCarsApi',(req,res) =>{
