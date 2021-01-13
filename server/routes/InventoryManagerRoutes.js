@@ -23,7 +23,7 @@ exports.postRoute  = (req, res) => {
             type: 'error'
         })
     }
-    console.log(req.body.Name);
+    console.log(req.body);
     Inventory.find({
             Name : req.body.Name
         },
