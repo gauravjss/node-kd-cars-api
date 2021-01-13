@@ -23,6 +23,7 @@ exports.postRoute  = (req, res) => {
             type: 'error'
         })
     }
+    console.log(req.body.Name);
     Inventory.find({
             Name : req.body.Name
         },
@@ -48,7 +49,9 @@ exports.postRoute  = (req, res) => {
 
 exports.bulkPostRoute  = (req, res) => {
 
-    let requestInventoryItem = req.body;
+    let requestInventoryItem = req.body.inventory;
+
+    console.log(requestInventoryItem);
     /*if(req.header('user') && req.header('user') === 'admin'){
         requestInventoryItem = carJSON;
     }*/
@@ -143,14 +146,16 @@ exports.getInventoryLogRoute = (req,res) =>{
 exports.patchRoute = (req,res) => {
     const id = req.params.id;
     const update = req.params.update;
-    const quantity = req.params.quantity;
-
+    const quantity = parseInt(req.params.quantity);
+    console.log(req.params.quantity);
     const body = req.body; //_.pick(req.body,['Miles_per_Gallon','Cylinders','Displacement','Horsepower','Weight_in_lbs','Acceleration','Name','Year','Origin']);
+    console.log(body);
     if(update === 'IN'){
         body.Quantity = + body.Quantity + +quantity;
     }else if(update === 'OUT'){
         body.Quantity = + body.Quantity - +quantity;
     }
+    console.log(body);
     if(!ObjectID.isValid(id)){
         res.status(404).send('The ID is Invalid');
     }
@@ -158,6 +163,7 @@ exports.patchRoute = (req,res) => {
     Inventory.findByIdAndUpdate(id, {$set: body},{new: true})
         .then((item) => {
             if(item){
+                console.log(item);
                 res.send({
                     item: item,
                     status: 200,
